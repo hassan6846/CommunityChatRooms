@@ -1,0 +1,57 @@
+/* Error page container styling */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    padding: 1rem;
+}
+
+/* GIF styling */
+.gif-container {
+    margin-bottom: 1.5rem;
+    width: 80%;
+}
+
+.error-gif {
+   
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styling */
+.error-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Message styling */
+.error-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0.5rem 0 1.5rem;
+    max-width: 600px;
+}
+
+/* Link styling */
+.error-link {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #4BB497;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.error-link:hover {
+    background-color: #3b947f;
+}
