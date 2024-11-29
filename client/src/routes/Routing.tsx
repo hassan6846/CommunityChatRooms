@@ -10,9 +10,7 @@ import Home from "../pages/Sidebar/AdminOutlet";
 //Nested
 import Profile from "../pages/ProfilePage/Profile";
 import Rooms from "../pages/Rooms/Rooms";
-import NewRooms from "../pages/CreateRooms/NewRooms";
-import Inbox from "../pages/Inbox/Inbox";
-import SearchPeople from "../pages/SearchPeople/SearchPeople";
+
 //toast
 import { Toaster } from "react-hot-toast";
 
@@ -25,11 +23,10 @@ const Routing = () => {
                 <Route path="/" element={<Navigate to="/home" />} />
                 <Route path="/home" element={<Home />}>
                     {/* Nested Routes */}
-                    <Route path="me" element={<Profile />} /> {/* /home/me */}
-                    <Route path="rooms" element={<Rooms />} /> {/* /home/rooms */}
-                    <Route path="create-new" element={<NewRooms />} /> {/* /home/create-new */}
-                    <Route path="inbox" element={<Inbox />} /> {/* /home/inbox */}
-                    <Route path="search" element={<SearchPeople />} /> {/* /home/search */}
+                    <Route path="me" element={<Profile />} /> 
+                    <Route path="rooms" element={<Rooms />} /> 
+              
+                  
                 </Route>
 
                 <Route path="/auth/login" element={<Login />} />

@@ -40,6 +40,12 @@
     align-items: center;
     column-gap: 0.3rem;
   }
+  .Aside_img{
+    height: 200px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
   .aside_links:hover {
    background-color:#4bb497;
     color: white;
@@ -85,7 +91,7 @@
     height: fit-content;
   }
   .aside_user_profile_img {
-    height: 80px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 1rem;
     border-radius: 100%;
