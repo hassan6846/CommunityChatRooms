@@ -1,10 +1,10 @@
 import React from 'react'
+//All Routess..
+import Routing from './routes/Routing'
 
 const App = () => {
   return (
-    <div>
-      <p>Wow</p>
-    </div>
+     <Routing/>
   )
 }
 
