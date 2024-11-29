@@ -1,12 +1,12 @@
 .sidebar_div_parent {
     width: 100%;
-    /* background-color: red; */
+
     display: flex;
-  }
-  .scrollable_container {
-    width: 100%; /* Adjust the width to accommodate the remaining space */
-    /* background-color: pink; */
+}
+
+.scrollable_container {
+    width: 100%;
+
     padding: 1rem;
     overflow-y: auto;
-  }
-  
+}

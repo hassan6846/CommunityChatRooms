@@ -14,7 +14,7 @@ import { ENDPOINT } from '../../api/Endpoint'
 
 
 
-const AdminSidebar = () => {
+const Home = () => {
 
     const [toggled, setToggled] = useState(true)
     function SidebarTOGGLE() {
@@ -55,29 +55,29 @@ const AdminSidebar = () => {
             {/* user Profile IMAGE */}
             <div className='aside_profiel_image_cover'> <img className={Aside_img} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcGLfMcRQLeG6HSAfx7kym7mqEfQMQAiykHg&s" alt="profile_img" /> <BiUpload className='upload_icon_aside' />   </div>
             {/* IMAGE DIV ENDS HERE */}
+            <div className={aside_link_flex}>
+                <p className={Asideheading}>Profile</p>
+                <Link to="/admin/orders" className='aside_links'> <BsFillCartFill className={aside_icon_state} /> <span className={Asidespan}>Manage Profile</span> </Link>
 
+            </div>
             {/* ORDER */}
             <div className={aside_link_flex}>
-                <p className={Asideheading}>Products</p>
-                <Link to="/admin/products" className='aside_links'> <BsBox2 className={aside_icon_state} /> <span className={Asidespan}>All Products</span> </Link>
-                <Link to="/admin/products/add" className='aside_links'> <AiOutlineAppstoreAdd className={aside_icon_state} /> <span className={Asidespan}>Add Product</span> </Link>
+                <p className={Asideheading}>Chat</p>
+                <Link to="/admin/products" className='aside_links'> <BsBox2 className={aside_icon_state} /> <span className={Asidespan}>Rooms</span> </Link>
+                <Link to="/admin/products/add" className='aside_links'> <AiOutlineAppstoreAdd className={aside_icon_state} /> <span className={Asidespan}>Create Room</span> </Link>
             </div>
             {/* uSers */}
-            <div className={aside_link_flex}>
-                <p className={Asideheading}>Orders</p>
-                <Link to="/admin/orders" className='aside_links'> <BsFillCartFill className={aside_icon_state} /> <span className={Asidespan}>All Orders</span> </Link>
 
-            </div>
             <div className={aside_link_flex}>
-                <p className={Asideheading}>Users</p>
-                <Link to="/admin/users" className='aside_links'> <BiSolidUser className={aside_icon_state} /> <span className={Asidespan}>All Users /Stats</span> </Link>
+                <p className={Asideheading}>Messages</p>
+                <Link to="/admin/users" className='aside_links'> <BiSolidMessageSquareDetail className={aside_icon_state} /> <span className={Asidespan}>Inbox/Outbox</span> </Link>
             </div>
             {/* WISHLISTS */}
 
             {/* vender OPTION REQUEST */}
             <div className={aside_link_flex}>
-                <p className={Asideheading}>Messages</p>
-                <Link to="/admin/messages" className='aside_links'> <BiSolidMessageSquareDetail className={aside_icon_state} /> <span className={Asidespan}>Messages</span> </Link>
+                <p className={Asideheading}>Browse People</p>
+                <Link to="/admin/messages" className='aside_links'> <BiSolidUser className={aside_icon_state} /> <span className={Asidespan}>Browse People</span> </Link>
             </div>
             {/* ALL */}
             <div className={aside_link_flex}>
@@ -90,4 +90,4 @@ const AdminSidebar = () => {
     )
 }
 
-export default AdminSidebar
+export default Home

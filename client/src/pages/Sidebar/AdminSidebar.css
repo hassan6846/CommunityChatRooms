@@ -1,30 +1,30 @@
 .user_profile_aside {
-    width: 18%;
+    width: 20% ;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: sticky;
-    top: 0; /* Stick to the top of the parent */
+    top: 0;
     background-color: rgb(255, 255, 255);
-    height: 100vh; /* Adjust the height to your preference */
+    height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    overflow-x: hidden; /* Enable scrolling if content overflows */
+    overflow-x: hidden;
     padding: 1rem;
   }
   .user_profile_aside_toggle {
     width: 5% fit-content;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     position: sticky;
-    top: 0; /* Stick to the top of the parent */
+    top: 0;
     background-color: rgb(255, 255, 255);
-    height: 100vh; /* Adjust the height to your preference */
+    height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    overflow-x: hidden; /* Enable scrolling if content overflows */
+    overflow-x: hidden;
     padding: 0.6rem;
     border-radius: 5px;
   }
   .aside_heading_sidebar_toggled {
     display: none;
   }
-  /* span text for toggle links */
+ 
   .icon_text_aside {
     font-weight: 500;
   }
@@ -41,11 +41,15 @@
     column-gap: 0.3rem;
   }
   .aside_links:hover {
-   background-color: rgb(57, 57, 238);
+   background-color:#4bb497;
     color: white;
   }
+  .aside_links:hover >*{
+    background-color:#4bb497;
+     color: white;
+   }
   .aside_links a.active{
-    background-color: rgb(57, 57, 238);
+    background-color: #4bb497;
   }
   
   .aside_links_toggled {
@@ -111,7 +115,7 @@
   .aside_icon_state {
     display: block;
   }
-  /* toglglle */
+ 
   .aside_icon_toggle {
     font-size: 25px;
   }

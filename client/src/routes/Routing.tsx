@@ -7,13 +7,13 @@ import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 
 import Error from "../pages/Error/Error";
-import AdminOutlet from "../pages/Sidebar/AdminOutlet";
+import Home from "../pages/Sidebar/AdminOutlet";
 
 const Routing = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<AdminOutlet />} >
+                <Route path="/" element={<Home />} >
                 
                 </Route>
                 <Route path="/login" element={<Login />} />

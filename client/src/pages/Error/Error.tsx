@@ -6,6 +6,7 @@ const Error = () => {
     <div className="error-container">
       <div className="gif-container">
         <img
+        draggable="false"
           src="https://64.media.tumblr.com/850572775b3ee76e83002cfcacdae433/12839bb73a29c5f0-ef/s500x750/b2c4ed712a9531b48246d725e8c13ea8276d7b7b.gif" // Replace with your square GIF URL
           alt="404 Error"
           className="error-gif"
