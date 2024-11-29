@@ -31,20 +31,7 @@ const Home = () => {
     //LOGOUT
     const HandleLogout = async () => {
         try {
-            const response = await axios.post(`${ENDPOINT}/logout`, {
-
-            }, {
-                withCredentials: true
-            })
-
-
-
-            localStorage.clear();
-            sessionStorage.clear();
-            window.location.href = '/';
-
-            toast.success(response.data.message)
-            console.log(response)
+          toast.success("Logout Sucessfully")
         } catch (error: any) {
             console.log(error.message)
         }
@@ -57,32 +44,32 @@ const Home = () => {
             {/* IMAGE DIV ENDS HERE */}
             <div className={aside_link_flex}>
                 <p className={Asideheading}>Profile</p>
-                <Link to="/admin/orders" className='aside_links'> <BsFillCartFill className={aside_icon_state} /> <span className={Asidespan}>Manage Profile</span> </Link>
+                <Link to="/home/me" className='aside_links'> <BsFillCartFill className={aside_icon_state} /> <span className={Asidespan}>Manage Profile</span> </Link>
 
             </div>
             {/* ORDER */}
             <div className={aside_link_flex}>
                 <p className={Asideheading}>Chat</p>
-                <Link to="/admin/products" className='aside_links'> <BsBox2 className={aside_icon_state} /> <span className={Asidespan}>Rooms</span> </Link>
-                <Link to="/admin/products/add" className='aside_links'> <AiOutlineAppstoreAdd className={aside_icon_state} /> <span className={Asidespan}>Create Room</span> </Link>
+                <Link to="/home/rooms" className='aside_links'> <BsBox2 className={aside_icon_state} /> <span className={Asidespan}>Rooms</span> </Link>
+                <Link to="/home/create-new" className='aside_links'> <AiOutlineAppstoreAdd className={aside_icon_state} /> <span className={Asidespan}>Create Room</span> </Link>
             </div>
             {/* uSers */}
 
             <div className={aside_link_flex}>
                 <p className={Asideheading}>Messages</p>
-                <Link to="/admin/users" className='aside_links'> <BiSolidMessageSquareDetail className={aside_icon_state} /> <span className={Asidespan}>Inbox/Outbox</span> </Link>
+                <Link to="/home/inbox" className='aside_links'> <BiSolidMessageSquareDetail className={aside_icon_state} /> <span className={Asidespan}>Inbox/Outbox</span> </Link>
             </div>
             {/* WISHLISTS */}
 
             {/* vender OPTION REQUEST */}
             <div className={aside_link_flex}>
                 <p className={Asideheading}>Browse People</p>
-                <Link to="/admin/messages" className='aside_links'> <BiSolidUser className={aside_icon_state} /> <span className={Asidespan}>Browse People</span> </Link>
+                <Link to="/home/search" className='aside_links'> <BiSolidUser className={aside_icon_state} /> <span className={Asidespan}>Browse People</span> </Link>
             </div>
             {/* ALL */}
             <div className={aside_link_flex}>
                 <p className={Asideheading}>Actions</p>
-                <Link to="/admin/logout" onClick={() => HandleLogout()} className='aside_links'> <BiLogOutCircle className={aside_icon_state} /> <span className={Asidespan}>Logout</span> </Link>
+                <p onClick={() => HandleLogout()} className='aside_links'> <BiLogOutCircle className={aside_icon_state} /> <span className={Asidespan}>Logout</span> </p>
             </div>
 
 
