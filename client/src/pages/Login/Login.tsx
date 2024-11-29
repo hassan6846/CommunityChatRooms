@@ -160,7 +160,7 @@ const Login = () => {
           </form>
           <div className="login_flex">
             <p className="login_page_tag_line">DON'T HAVE ACCOUNT?</p>
-            <Link to="/signup" className="register">
+            <Link to="/auth/signup" className="register">
               Create Account Instead
             </Link>
           </div>

@@ -12,10 +12,10 @@ const Routing = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} >
+                <Route path="/chat" element={<Home />} >
                 </Route>
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
+                <Route path="/auth/login" element={<Login />} />
+                <Route path="/auth/signup" element={<Signup />} />
                 <Route path="*" element={<Error />} />
             </Routes>
         </Router>

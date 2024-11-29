@@ -77,7 +77,7 @@ const Signup = () => {
       <div className="signup_form_wrapper">
         <h1 className="signup_head">Sign up for an account</h1>
         <p className="para_signup">
-          No credit card required. Already have an account? <Link to="/login" className="Link_login">Log in.</Link>
+          No credit card required. Already have an account? <Link to="/auth/login" className="Link_login">Log in.</Link>
         </p>
 
         <Stepper activeStep={activeStep} alternativeLabel>
