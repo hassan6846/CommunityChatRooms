@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../../components/header/Header'
 
 const Inbox = () => {
   return (
-    <div>Inbox</div>
+    <div>
+
+      
+<Header title="Inbox"/>
+    </div>
   )
 }
 
