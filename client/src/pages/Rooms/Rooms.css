@@ -1,3 +1,30 @@
 .RoomContainer{
     padding:10px;
 }
+.Room_page_head{
+    box-shadow: rgba(100, 100, 111, 0.123) 0px 7px 20px 0px;
+
+    padding: 1rem;
+    color: rgb(19, 16, 57);
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .RoomHEAD{
+    font-size: 2.5rem;
+  }
+  .ACTNBUTN{
+    color: #fff;
+    background-color: #3b947f;
+    cursor: pointer;
+    padding: 10px 30px;
+  }
+  @media screen and (min-width:300px) and (max-width:660px) {
+
+    .wishlist_page_head{
+     font-size: 1.8rem;
+     padding: 0.2rem;
+    }
+  }

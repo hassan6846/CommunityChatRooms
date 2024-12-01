@@ -24,16 +24,15 @@ const Signup = () => {
   const [name, setName] = useState<any>("");
   const [lastname, setLastname] = useState<any>("");
   const [email, setEmail] = useState<any>("");
-  const [phone, setPhone] = useState<any>("");
   const [password, setPassword] = useState<any>("");
   const [cpassword, setCpassword] = useState<any>("");
   const [buttonActive, setButtonActive] = useState<boolean>(true);
 
   // useEffect for validation and enabling/disabling the button
   useEffect(() => {
-    const isFormValid = name && lastname && validateEmail(email) && phone && validatePassword(password) && password === cpassword;
+    const isFormValid = name && lastname && validateEmail(email) && validatePassword(password) && password === cpassword;
     setButtonActive(!isFormValid); // disable if form is not valid
-  }, [name, lastname, email, phone, password, cpassword]);
+  }, [name, lastname, email, password, cpassword]);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -51,16 +50,18 @@ const Signup = () => {
   const HandleSubmit = async (e: any) => {
     e.preventDefault();
 
-    const username = `${name}${lastname}`;
+
 
     try {
-      const response = await axios.post(`${ENDPOINT}/register`, {
-        username,
+      const username = `${name}${lastname}`;
+      const response = await axios.post(`${ENDPOINT}/signup`, {
+        firstname: name,
+        lastname: lastname,
+        username: username,
         email,
-        phone,
         password,
       });
-      if (response.data.success) {
+      if (response.status===200) {
         toast.success("Account created successfully");
         handleNext();
 
@@ -97,7 +98,6 @@ const Signup = () => {
             </div>
             <InputProps onChange={(e: any) => setPassword(e.target.value)} title="Password" type="password" />
             <InputProps onChange={(e: any) => setCpassword(e.target.value)} title="Confirm password" type="password" />
-            <InputProps onChange={(e: any) => setPhone(e.target.value)} title="Phone Number" type="number" />
             <div className="btn_next">
               <MDBBtn disabled={buttonActive} onClick={HandleSubmit} style={{ backgroundColor: "#4BB497" }} className="next_action">
                 Create my account
