@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Rooms.css';
 import { Avatar, List, ListItem, ListItemAvatar, ListItemText, ListItemIcon, Typography } from '@mui/material';
 import { Box } from '@mui/system';
@@ -15,7 +15,7 @@ const roomsData = [
   { id: 4, name: 'Secret Society', avatar: 'https://via.placeholder.com/50', lastMessage: 'The meeting starts at 9 PM.', isPrivate: true },
 ];
 
-const socket = io("http://localhost:3000"); // Replace with your server URL
+const socket = io("http://localhost:5000"); // Replace with your server URL
 
 const Rooms = () => {
   const [open, setOpen] = useState(false);
@@ -120,7 +120,7 @@ const Rooms = () => {
               </MessageList>
               <MessageInput
                 value={newMessage}
-                onChange={(e:any) => setNewMessage(e.target.value)}
+                onChange={(e: any) => setNewMessage(e.target.value)}
                 placeholder="Type a message..."
                 attachButton={false}
                 onSend={sendMessage}
