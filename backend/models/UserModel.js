@@ -1,6 +1,6 @@
 const validator=require("validator")
 const mongoose=require("mongoose")
-
+const bcrypt=require("bcryptjs")
 
 const UserSchema=new mongoose.Schema({
     name:{
@@ -40,7 +40,7 @@ const UserSchema=new mongoose.Schema({
     },
     role:{
         type:String,
-        required:true,
+      
         enum:["user","admin"],
 
         default:"user"
@@ -49,13 +49,7 @@ const UserSchema=new mongoose.Schema({
         type:Boolean,
         default:true
     },
-    isVerified:{
-        type:Boolean,
-        default:false
-    },
-    verificationToken:{
-        type:String
-    },
+
     passwordResetToken:{
         type:String
     },
@@ -71,6 +65,7 @@ const UserSchema=new mongoose.Schema({
 
 
 })
+//HashPassword
 
 const User=mongoose.model("User",UserSchema)
 module.exports=User
