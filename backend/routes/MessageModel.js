@@ -26,6 +26,7 @@ const MessageSchema = new mongoose.Schema({
         maxlength: [200, "message must note  be  more than 200 characters"],
 
     },
+    
     createdAt: {
         type: Date,
         default: Date.now()
