@@ -1,9 +1,5 @@
 const express=require('express')
 const app=express()
-
-
-
-
 //packages
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -32,7 +28,9 @@ app.use((err, req, res, next) => {
 
 
 //routes
-
+app.get('/', (req, res) => {
+    res.send('/api/v1');
+});
 
 //server
 
