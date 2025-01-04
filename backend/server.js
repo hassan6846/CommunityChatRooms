@@ -1,6 +1,7 @@
 const http = require("http");
 const app = require("./app");
 const { Server } = require("socket.io");
+const connectDB = require("./db/Connectdb");
 
 // Create the HTTP server
 const server = http.createServer(app);
@@ -28,6 +29,9 @@ io.on("connection", (socket) => {
     });
 });
 
+
+//connectdb
+ connectDB()
 // Start the server
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {

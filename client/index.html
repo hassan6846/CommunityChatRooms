@@ -10,8 +10,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
   <title>Community Chat Rooms</title>
 </head>
-
+<noscript></noscript>
 <body>
+  <noscript>
+    <style>
+      .noscript-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        font-family: 'Outfit', sans-serif;
+      }
+      .noscript-container img {
+        max-width: 300px;
+        margin-bottom: 20px;
+        width: auto;
+      }
+      .noscript-container p {
+        color: lightgray;
+      }
+      .noscript-container h1 {
+        color: black;
+      }
+    </style>
+    <div class="noscript-container">
+      <img src="https://media.tenor.com/-iiMZcIHkE8AAAAe/sad-emoji.png" alt="Sad Emoji">
+      <h1>JavaScript Required</h1>
+      <p>Please enable JavaScript to use this site.</p>
+    </div>
+  </noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
