@@ -1,0 +1,47 @@
+.HomeContainer {
+    width: 100%;
+    display: flex;
+}
+
+.Sidebar {
+    overflow-x: hidden;
+    width: 15%;
+
+    border-left-color: #838385;
+    height: 100vh;
+    padding: 10px;
+    border-right: 1px solid #dee2e6;
+}
+
+.iconContainer {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.profileBtn {
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+
+    column-gap: 1rem;
+
+    &:hover {
+        border-radius: 5px;
+        background-color: #F4F4F4;
+    }
+}
+
+.Navbar {
+
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+    width: 85%;
+
+    height: 80px;
+
+}
+.LogoutWrapper{
+
+
+}
