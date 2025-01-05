@@ -45,7 +45,13 @@ const UserSchema=new mongoose.Schema({
 
         default:"user"
     },
+    avatar:{
+        type:String,
+        default:"https://avatar.iran.liara.run/public/boy?username=user",
+        required:true
+    },
     isActive:{
+        //set false to block account..
         type:Boolean,
         default:true
     },
@@ -58,6 +64,7 @@ const UserSchema=new mongoose.Schema({
         default:Date.now()
     },
     Socketid:{
+        
         type:String
     },
 
@@ -65,7 +72,14 @@ const UserSchema=new mongoose.Schema({
 
 
 })
+///////////////////////////////Methods
 //HashPassword
-
+UserSchema.pre("save",async function(next){
+    const user=this
+    if(user.isModified("password")){
+        user.password=await bcrypt.hash(user.password,10)
+    }
+    next()
+})
 const User=mongoose.model("User",UserSchema)
 module.exports=User

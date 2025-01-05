@@ -12,7 +12,7 @@ const Register = async (req, res) => {
     password,
 
   } = req.body
-  if (!name || !email || !password) {
+  if (!name || !email || !password ) {
     return res.status(400).json({
       sucess: false,
       msg: "Please enter all fields"
@@ -57,8 +57,17 @@ const Register = async (req, res) => {
         msg: "User already exists"
       })
     }
-    //create new user
+    //find by name  
+     const findByName=await User.findOne({name})
+      if(findByName){
+        return res.status(400).json({
+          sucess:false,
+          msg:"Name Already Taken"
+        })
+      }
+    //create new users
     const user = new User({
+      avatar:`https://avatar.iran.liara.run/public/boy?username=${name}`,
       name,
       email,
       password
