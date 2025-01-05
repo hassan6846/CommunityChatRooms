@@ -27,6 +27,8 @@ app.use((err, req, res, next) => {
 const AuthRoutes=require('./routes/AuthRoutes')
 
 
+
+
 //routes middleware
 app.use('/api/v1/',AuthRoutes)
 
