@@ -1,7 +1,7 @@
 //librairies
 const validator = require('validator')
 //model
-const User = require("../models/UserModel")
+const User = require("../../models/UserModel")
 
 
 //Function Main Requirments

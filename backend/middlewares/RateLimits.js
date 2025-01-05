@@ -14,5 +14,15 @@ const RegisterRateLimit = RateLimits({
     }
 })
 
-
-module.exports = { RegisterRateLimit }
+///
+const LoginRequestLimit=RateLimits({
+    windowMs: 15 * 60 * 1000, // 15 minutes window
+    max: 20, //10 request from single ip for login...
+     handler: (req, res) => {
+        res.status(429).json({
+            success: false,
+            msg: "Too many login attempts from this IP, please try again after 15 minutes"
+        });
+    }
+})
+module.exports = { RegisterRateLimit,LoginRequestLimit }
